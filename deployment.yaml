@@ -46,9 +46,9 @@ metadata:
 spec:
   externalTrafficPolicy: Cluster
   ports:
-  - port: 3000
+  - port: 8080
     protocol: TCP
-    targetPort: 3000
+    targetPort: 8080
   selector:
     workload.user.cattle.io/workloadselector: deployment-entrega-final-api-node
   type: LoadBalancer 
