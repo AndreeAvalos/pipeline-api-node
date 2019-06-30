@@ -1,0 +1,15 @@
+stages:
+- name: Crear Imagen
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: andreeavalos/pipeline-api
+      pushRemote: true
+      registry: index.docker.io
+- name: Crear en k8s
+  steps:
+  - applyYamlConfig:
+      path: ./deployment.yaml
+timeout: 60
+notification: {}
