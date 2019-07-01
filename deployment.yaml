@@ -21,7 +21,7 @@ spec:
         workload.user.cattle.io/workloadselector: deployment-entrega-final-api-node
     spec:
       containers:
-      - image: node
+      - image: andreeavalos/api
         imagePullPolicy: Always
         name: api-node
       dnsPolicy: ClusterFirst
